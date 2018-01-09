@@ -1,0 +1,52 @@
+/*! Place your custom styles here */
+
+.col-md-8-cu{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.followBtn{
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  border-radius: 6px;
+  padding-top: 0.46428571em;
+  padding-bottom: 0.46428571em;
+  padding-right: 2.78571429em;
+  padding-left: 2.78571429em;
+  border: 1px solid #252525;
+  border-width: 1px;
+  font-size: inherit;
+  line-height: 1.85714286em;
+  position: fixed;
+  top: 3%;
+  right: 5%;
+  z-index: 1;
+} /* 따라다니는 버튼 */
+
+.followBtn--xs{
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  border-radius: 6px;
+  padding-top: 0.46428571em;
+  padding-bottom: 0.46428571em;
+  border-width: 1px;
+  font-size: inherit;
+  line-height: 1.85714286em;
+  position: fixed;
+  top: 3%;
+  right: 5%;
+  z-index: 1;
+} /* 따라다니는 버튼 */
+
+.btn--xsCu {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 5px;
+  padding-left: 5px;
+}
