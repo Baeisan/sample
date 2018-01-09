@@ -36,7 +36,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 const Apply = require('./models/apply');
 
 app.get('/', function(req, res){
-  res.render('info.ejs');
+  res.render('info.ejs',{boolean:false});
+});
+
+app.get('/checkingApply', function(req, res){
+  res.render('checkingApply.ejs');
 });
 
 app.post('/applyMiro', function(req, res){
@@ -49,14 +53,11 @@ app.post('/applyMiro', function(req, res){
     phonenumber: "0" + req.body.phonenumber
   });
 
-  Apply.find({name: req.body.name, studentnumber: req.body.studentnumber, phonenumber: req.body.phonenumber}, function(err, result){
+  Apply.find({studentnumber: req.body.studentnumber}, function(err, result){
     if(err) throw err;
       if(result.length > 0){
       //검색결과 존재
-        if(result.name == req.body.name && result.studentnumber == req.body.studentnumber && result.phonenumber == req.body.phonenumber){
-          window.alert('이미 지원하셨습니다.')
-          res.redirect('/');
-        }
+          res.render('info.ejs',{boolean: true});
       } else{
         apply.save(function(err){
           if(err) throw err;

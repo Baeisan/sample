@@ -74,7 +74,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-  color: #666666;
+  color: #595757;
   font-weight: 400;
 }
 h1,
@@ -951,8 +951,8 @@ div[data-overlay] ul {
 }
 .btn--primary,
 .btn--primary:visited {
-  background: #4a90e2;
-  border-color: #4a90e2;
+  background: #59b7db;
+  border-color: #59b7db;
 }
 .btn--primary .btn__text,
 .btn--primary:visited .btn__text {
@@ -963,7 +963,7 @@ div[data-overlay] ul {
   color: #fff;
 }
 .btn--primary:hover {
-  background: #609de6;
+  background: #59b7db;
 }
 .btn--primary:active {
   background: #3483de;

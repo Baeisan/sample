@@ -17,7 +17,7 @@
   padding-bottom: 0.46428571em;
   padding-right: 2.78571429em;
   padding-left: 2.78571429em;
-  border: 1px solid #252525;
+  border: 1px solid #59b7db;
   border-width: 1px;
   font-size: inherit;
   line-height: 1.85714286em;
@@ -49,4 +49,10 @@
   padding-bottom: 0;
   padding-right: 5px;
   padding-left: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

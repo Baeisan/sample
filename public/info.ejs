@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Stack Multipurpose HTML Template</title>
+        <title>MIRO2018</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Site Description Here">
         <link href="bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -33,103 +33,6 @@
             <!--end of container-->
         </section>
         <!--end bar-->
-        <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="side-menu" data-animation="from-right">
-            <div class="side-menu__module">
-                <a class="btn btn--icon bg--facebook block" href="#">
-                    <span class="btn__text">
-                        <i class="socicon-facebook"></i>
-                        Sign up with Facebook
-                    </span>
-                </a>
-                <a class="btn btn--icon bg--dark block" href="#">
-                    <span class="btn__text">
-                        <i class="socicon-mail"></i>
-                        Sign up with Email
-                    </span>
-                </a>
-            </div>
-            <!--end module-->
-            <hr>
-            <div class="side-menu__module">
-                <span class="type--fine-print float-left">Already have an account?</span>
-                <a class="btn type--uppercase float-right" href="#">
-                    <span class="btn__text">Login</span>
-                </a>
-            </div>
-            <!--end module-->
-            <hr>
-            <div class="side-menu__module">
-                <ul class="list--loose list--hover">
-                    <li>
-                        <a href="#">
-                            <span class="h5">About Stack</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="h5">Careers</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="h5">Investors</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="h5">Locations</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="h5">Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--end module-->
-            <hr>
-            <div class="side-menu__module">
-                <ul class="social-list list-inline list--hover">
-                    <li>
-                        <a href="#">
-                            <i class="socicon socicon-google icon icon--xs"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="socicon socicon-twitter icon icon--xs"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="socicon socicon-facebook icon icon--xs"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="socicon socicon-instagram icon icon--xs"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="socicon socicon-pinterest icon icon--xs"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="notification pos-top pos-right search-box bg--white border--bottom" data-animation="from-top" data-notification-link="search-box">
-            <form>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                        <input type="search" name="query" placeholder="Type search query and hit enter" />
-                    </div>
-                </div>
-                <!--end of row-->
-            </form>
-        </div>
-        <!--end of notification-->
         <div class="nav-container ">
             <div class="bar bar--sm visible-xs">
                 <div class="container">
@@ -375,11 +278,11 @@
                                       </div>
                                       <div class="col-sm-6">
                                           <label>학번:</label>
-                                          <input type="text" name="studentnumber" id="userStudentnumber" required/>
+                                          <input type="number" name="studentnumber" id="userStudentnumber" required/>
                                       </div>
                                       <div class="col-sm-6">
                                           <label>전화번호:(하이픈없이 작성해주세요.)</label>
-                                          <input type="text" name="phonenumber" id="userPhonenumber" required/>
+                                          <input type="number" name="phonenumber" id="userPhonenumber" required/>
                                       </div>
                                       <div class="col-sm-12">
                                           <label>지원동기:</label>
@@ -389,105 +292,12 @@
                                         <button type="submit" class="btn btn--primary">지원하기</button>
                                       </div>
                                   </form>
-                                      <div class="col-sm-6">
-                                        <button type="submit" class="btn btn--primary" style="margin-left:0px;" onClick="checkApply()">지원확인</button>
-                                      </div>
-                                  </div>
-                          </div>
-                          <div id="account-notifications" class="hidden account-tab">
-                              <h4>Email Notifications</h4>
-                              <p>Select the frequency with which you'd like to recieve product summary emails:</p>
-                              <form>
-                                  <div class="row">
-                                      <div class="boxed bg--secondary boxed--border">
-                                          <div class="col-xs-4 text-center">
-                                              <div class="input-radio">
-                                                  <span>Never</span>
-                                                  <input type="radio" name="frequency" value="never" class="validate-required" />
-                                                  <label></label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-4 text-center">
-                                              <div class="input-radio checked">
-                                                  <span>Weekly</span>
-                                                  <input type="radio" name="frequency" value="weekly" class="validate-required" />
-                                                  <label></label>
-                                              </div>
-                                          </div>
-                                          <div class="col-xs-4 text-center">
-                                              <div class="input-radio">
-                                                  <span>Monthly</span>
-                                                  <input type="radio" name="frequency" value="monthly" class="validate-required" />
-                                                  <label></label>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-md-4 col-sm-5">
-                                          <button type="submit" class="btn btn--primary type--uppercase">Save Preferences</button>
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                          <div id="account-billing" class="hidden account-tab">
-                              <h4>Billing Details</h4>
-                              <div class="boxed boxed--border bg--secondary">
-                                  <h5>Payment Methods</h5>
-                                  <hr>
                                   <form>
-                                      <div class="row">
-                                          <ul>
-                                              <li>
-                                                  <div class="col-sm-6">
-                                                      <p>
-                                                          <i class="material-icons">credit_card</i>
-                                                          <span> Mastercard ending in
-                                                              <strong>4722</strong>
-                                                          </span>
-                                                      </p>
-                                                  </div>
-                                                  <div class="col-sm-3 text-right text-left-xs">
-                                                      <button type="submit" class="btn bg--error">Remove</button>
-                                                  </div>
-                                                  <div class="col-sm-3 text-right text-left-xs">
-                                                      <button type="submit" class="btn">Edit</button>
-                                                  </div>
-                                              </li>
-                                          </ul>
-                                      </div>
-                                      <hr>
-                                      <button type="submit" class="btn">Add New Method</button>
+                                    <div class="col-sm-6">
+                                      <button type="submit" class="btn btn--primary" onclick="checkingApply()">지원확인</button>
+                                    </div>
                                   </form>
-                              </div>
-                          </div>
-                          <div id="account-password" class="hidden account-tab">
-                              <h4>Password</h4>
-                              <p>Passwords must be at least 6 characters in length.</p>
-                              <form>
-                                  <div class="row">
-                                      <div class="col-xs-12">
-                                          <label>Old Password:</label>
-                                          <input type="password" name="old-password" />
-                                      </div>
-                                      <div class="col-sm-6">
-                                          <label>New Password:</label>
-                                          <input type="password" name="new-password" />
-                                      </div>
-                                      <div class="col-sm-6">
-                                          <label>Retype New Password:</label>
-                                          <input type="password" name="new-password-confirm" />
-                                      </div>
-                                      <div class="col-md-3 col-sm-4">
-                                          <button type="submit" class="btn btn--primary type--uppercase">Save Password</button>
-                                      </div>
                                   </div>
-                              </form>
-                          </div>
-                          <div id="account-delete" class="hidden account-tab">
-                              <h4>Delete Account</h4>
-                              <p>Permanently remove your account using the button below. Warning, this action is permanent.</p>
-                              <form>
-                                  <button type="submit" class="btn bg--error type--uppercase">Delete Account</button>
-                              </form>
                           </div>
                       </div>
                   </div>
@@ -521,35 +331,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-sm-6 text-right text-center-xs">
-                            <ul class="social-list list-inline list--hover">
-                                <li>
-                                    <a href="#">
-                                        <i class="socicon socicon-google icon icon--xs"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="socicon socicon-twitter icon icon--xs"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="socicon socicon-facebook icon icon--xs"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="socicon socicon-instagram icon icon--xs"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn type--uppercase">
-                                <span class="btn__text">
-                                    Contact Us
-                                </span>
-                            </a>
-                        </div>
                     </div>
                     <!--end of row-->
                     <div class="row">
@@ -567,46 +348,16 @@
             </footer>
         </div>
         <!--<div class="loader"></div>-->
-        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
-            <i class="stack-interface stack-up-open-big"></i>
-        </a>
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/flickity.min.js"></script>
-        <script src="js/easypiechart.min.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/typed.min.js"></script>
-        <script src="js/datepicker.js"></script>
-        <script src="js/isotope.min.js"></script>
-        <script src="js/ytplayer.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/granim.min.js"></script>
-        <script src="js/jquery.steps.min.js"></script>
-        <script src="js/countdown.min.js"></script>
-        <script src="js/twitterfetcher.min.js"></script>
-        <script src="js/spectragram.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/scripts.js"></script>
+
+        <% if(boolean == true) { %>
+          <script type="text/javascript">
+          alert('이미 신청 완료 되었습니다.');
+          </script>
+        <% } %>
+
         <script>
-          function apply(){
-            axios.post('/applyMiro', {
-              name: document.getElementById('userName').value,
-              major: document.getElementById('userMajor').value,
-              studentnumber: document.getElementById('userStudentnumber').value,
-              grade: document.getElementById('userGrade').value,
-              motive: document.getElementById('userMotive').value,
-              phonenumber: document.getElementById('userPhonenumber').value
-            })
-            .then(function(res){
-              document.getElementById('userName').value = "";
-              document.getElementById('userMajor').value = "";
-              document.getElementById('userStudentnumber').value = "";
-              document.getElementById('userGrade').value = "";
-              document.getElementById('userMotive').value = "꼭 작성하셔야합니다. 선별여부에 영향있음.";
-              document.getElementById('userPhonenumber').value = "";
-            })
-            .catch(function(err){
-              console.log(err);
-            });
+          function checkingApply(){
+            window.open('checkingApply','_blank','width:400px, height:400px');
           }
         </script>
 
