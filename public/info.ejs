@@ -292,11 +292,9 @@
                                         <button type="submit" class="btn btn--primary">지원하기</button>
                                       </div>
                                   </form>
-                                  <form>
                                     <div class="col-sm-6">
                                       <button type="submit" class="btn btn--primary" onclick="checkingApply()">지원확인</button>
                                     </div>
-                                  </form>
                                   </div>
                           </div>
                       </div>
@@ -352,6 +350,20 @@
         <% if(boolean == true) { %>
           <script type="text/javascript">
           alert('이미 신청 완료 되었습니다.');
+          </script>
+        <% } %>
+
+        <% if(checkResult == 1) { %>
+          <script type="text/javascript">
+          alert('신청 완료 되었습니다. 관심을 가져 주셔서 감사합니다.');
+          window.close();
+          </script>
+        <% } %>
+
+        <% if(checkResult == 2) { %>
+          <script type="text/javascript">
+          alert('신청되지 않았습니다.');
+          window.close();
           </script>
         <% } %>
 

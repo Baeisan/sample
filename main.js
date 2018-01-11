@@ -36,11 +36,22 @@ app.use(bodyParser.urlencoded({extended: false}));
 const Apply = require('./models/apply');
 
 app.get('/', function(req, res){
-  res.render('info.ejs',{boolean:false});
+  res.render('info.ejs',{boolean:false, checkResult:""});
 });
 
 app.get('/checkingApply', function(req, res){
   res.render('checkingApply.ejs');
+});
+
+app.post('/check', function(req, res){
+  Apply.find({studentnumber: req.body.studentnumber}, function(err, result){
+    if(err) throw err;
+    if(result.length > 0){
+      res.render('info.ejs',{boolean:false, checkResult: 1});
+    } else{
+      res.render('info.ejs',{boolean:false, checkResult: 2});
+    }
+  });
 });
 
 app.post('/applyMiro', function(req, res){
