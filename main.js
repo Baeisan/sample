@@ -22,8 +22,7 @@ db.once('open', function() {
 
 var static = require('serve-static');
 app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/css'));
-app.use(express.static(__dirname + '/img'));
+app.use(express.static(__dirname + '/src'));
 
 var ejs = require('ejs');
 app.set('views', __dirname + '/public');
