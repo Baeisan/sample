@@ -8,7 +8,7 @@ var storage = multer.diskStorage({
         cb(null, 'uploads/')
     },
     filename: function (req, file, cb) {
-        cb(null, req.body.studentnumber + "_timetable")
+        cb(null, req.body.studentnumber + "_timetable"+".png")
     }
 });
 
@@ -103,6 +103,10 @@ app.post('/applyMiro', upload.single('timetable'), function(req, res){
     }
   }
 });
+
+app.post('/closeWin', function(rea, res){
+  res.write('<script>window.close()</script>')
+})
 
 app.get('/ggg', function(req, res){
   res.redirect('ggg.html')

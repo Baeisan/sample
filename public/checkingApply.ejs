@@ -28,7 +28,7 @@
             <div class="col-sm-6">
               <label>학번:</label>
               <input type="number" name="studentnumber" id="userStudentnumber" required/>
-              <button class="btn btn--primary" onClick="showApply();">지원확인</button>
+              <button class="btn btn--primary" onClick="showApply();" style="width:20%;">지원확인</button>
             </div>
           </div>
       </div>
@@ -51,6 +51,7 @@
         studentnumber: document.getElementById('userStudentnumber').value
       })
       .then(function(res){
+        if(res.data.success == true){
         document.getElementById("showing").innerHTML =""
         document.getElementById("showing1").innerHTML =""
         var node = document.createElement("p");
@@ -58,8 +59,8 @@
         var node2 = document.createElement("p");
         var node3 = document.createElement("p");
         var node4 = document.createElement("p");
+        var form = document.createElement("form");
         var button = document.createElement("button");
-        var button1 = document.createElement("button");
         var textnode = document.createTextNode("이름: "+res.data.name);
         var textnode1 = document.createTextNode("학년: "+res.data.grade);
         var textnode2 = document.createTextNode("학과(부): "+res.data.major);
@@ -71,22 +72,46 @@
         node2.appendChild(textnode2);
         node3.appendChild(textnode3);
         node4.appendChild(textnode4);
+        form.appendChild(button);
+        form.setAttribute("action", "/closeWin");
+        form.setAttribute("method", "post");
         button.appendChild(buttonText);
         button.setAttribute("type", "submit");
         button.setAttribute("class", "btn btn--primary");
-        button.setAttribute("style", "width:50%;")
+        button.setAttribute("style", "width:50%;");
         document.getElementById("showing").appendChild(node);
         document.getElementById("showing").appendChild(node1);
         document.getElementById("showing").appendChild(node2);
         document.getElementById("showing").appendChild(node3);
         document.getElementById("showing").appendChild(node4);
-        document.getElementById("showing1").appendChild(button);
+        document.getElementById("showing1").appendChild(form);
+      }else {
+        document.getElementById("showing").innerHTML =""
+        document.getElementById("showing1").innerHTML =""
+        var node = document.createElement("p");
+        var form = document.createElement("form");
+        var button = document.createElement("button");
+        var textnode = document.createTextNode("신청되지 않았습니다.");
+        var buttonText = document.createTextNode("창 닫기");
+        node.appendChild(textnode);
+        form.appendChild(button);
+        form.setAttribute("action", "/closeWin");
+        form.setAttribute("method", "post");
+        button.appendChild(buttonText);
+        button.setAttribute("type", "submit");
+        button.setAttribute("class", "btn btn--primary");
+        button.setAttribute("style", "width:50%;");
+        document.getElementById("showing").appendChild(node);
+        document.getElementById("showing1").appendChild(form);
+      }
       })
       .catch(function(err){
         console.log(err)
       });
     }
   </script>
+
+
 </body>
 
 </html>
