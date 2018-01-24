@@ -2762,7 +2762,7 @@ mr = (function (mr, $, window, document){
                 themeDefaults = {
                     strings: [],
                     typeSpeed: 200,
-                    loop: true,
+                    loop: false,
                     showCursor: false
                 }, ao = {};
 

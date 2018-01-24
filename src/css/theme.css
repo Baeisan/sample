@@ -549,7 +549,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background-size: cover !important;
+  background-size: 100% 100% !important;
   background-position: 50% 50% !important;
   z-index: 0;
   transition: opacity .3s linear;
@@ -4058,7 +4058,9 @@ h1:not(:last-child),
 }
 h2,
 .h2 {
-  margin-bottom: 0.78787878787879em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1.5em;
 }
 h3,
 .h3 {
@@ -4602,7 +4604,7 @@ p.lead img {
   position: relative;
 }
 .imagebg:not(.image--light) span {
-  color: #fff;
+  color: #595757;
 }
 .imagebg.border--round {
   overflow: hidden;
