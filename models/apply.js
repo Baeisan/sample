@@ -6,10 +6,10 @@ const imgSchema = mongoose.Schema;
 const apply = new userSchema({
   name: {type: String, required: true},
   major: {type: String, required: true, trim: true},
-  studentnumber: {type: Number, required: true, trim: true},
-  grade: {type: Number, required: true, min: 1, max: 4},
+  studentnumber: {type: String, required: true, trim: true},
+  grade: {type: String, required: true},
   motive: String,
-  phonenumber: {type: Number, required: true, trim: true},
+  phonenumber: {type: String, required: true, trim: true},
   applyDate: {type: Date, default: new Date()}
 });
 

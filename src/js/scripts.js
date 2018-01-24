@@ -2761,7 +2761,7 @@ mr = (function (mr, $, window, document){
             var strings = text.attr("data-typed-strings") ? text.attr("data-typed-strings").split(",") : [],
                 themeDefaults = {
                     strings: [],
-                    typeSpeed: 100,
+                    typeSpeed: 200,
                     loop: true,
                     showCursor: false
                 }, ao = {};

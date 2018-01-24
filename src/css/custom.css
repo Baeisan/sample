@@ -22,9 +22,9 @@
   font-size: inherit;
   line-height: 1.85714286em;
   position: fixed;
-  top: 3%;
+  top: 5%;
   right: 5%;
-  z-index: 1;
+  z-index: 10;
 } /* 따라다니는 버튼 */
 
 .followBtn--xs{
@@ -39,9 +39,9 @@
   font-size: inherit;
   line-height: 1.85714286em;
   position: fixed;
-  top: 3%;
+  top: 43.375px;
   right: 5%;
-  z-index: 1;
+  z-index: 10;
 } /* 따라다니는 버튼 */
 
 .btn--xsCu {
@@ -49,10 +49,90 @@
   padding-bottom: 0;
   padding-right: 5px;
   padding-left: 5px;
+  position: fixed;
+  top: 43.375px;
+  right: 5%;
+  z-index: 10;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.logo-cu{
+  width: 50%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchform-cu{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.col-sm-12-cu{
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    background-image:
+}
+
+@media (max-width:767px) {
+  .word-cu{
+    position: absolute;
+    top: 50%;
+    margin-left: 21%;
+    font-size: 70%;
+  }
+}
+
+@media (min-width:768px) and (max-width: 1199px){
+  .word-cu{
+    position: absolute;
+    top: 50%;
+    margin-left: 15%;
+    font-size: 82%;
+  }
+}
+
+.word-cu{
+  font-family: 'NanumBarunGothic'
+  font-size: 2.35714286em;
+  position: absolute;
+  top: 50%;
+  margin-left: 21%;
+  transform: translate(-50%, -50%);
+}
+
+.col-sm-12-cu {
+  width: 100%;
+}
+
+.background-image-holder-cu {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+  transition: opacity .3s linear;
+  -webkit-transition: opacity .3s linear;
+  opacity: 1;
+}
+
+.container-cu {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-size: 30px;
 }
