@@ -71,7 +71,7 @@
                             <!--end module-->
                         </div>
                         <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm">
-                            <div class="bar__module">
+                            <div class="bar__module" id='bt'>
                                 <a class="followBtn btn--sm btn--primary type--uppercase" href="#topOfApply">
                                     <span class="btn__text">
                                         Apply Now
@@ -87,6 +87,9 @@
             </nav>
             <!--end bar-->
         </div>
+        <!-- 탑버튼 -->
+        <button onclick="topFunction()" class='logo myBtn' id="tttt" title="Go to top" ><img src="/img/gototop.png" width="50" height="50" /></button>
+
         <div class="main-container">
           <section id="sector1">
             <!-- 메인화면: 당신과 지나는 미로,검색창디자인 -->
@@ -440,6 +443,34 @@
             window.open('checkingApply','_blank','width:400px, height:400px');
           }
         </script>
+<!--탑버튼 지원버튼사라지게해여 -->
+        <script>
+                window.onscroll = function() {scrollFunction(); scrollFunction2();}
+                function scrollFunction() {
+            if (document.body.scrollTop > 5100|| document.documentElement.scrollTop > 5100) {
+                document.getElementById("bt").style.display = "none";
+            } else {
+                document.getElementById("bt").style.display = "block";
+            }
+            }
+
+                // When the user scrolls down 20px from the top of the document, show the button
+
+                function scrollFunction2() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("tttt").style.display = "block";
+                    } else {
+                        document.getElementById("tttt").style.display = "none";
+                    }
+                }
+
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+                </script>
 
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/flickity.min.js"></script>
