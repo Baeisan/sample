@@ -8,7 +8,7 @@ var app = express();
 
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://MIRO2018:it244miro2018@ds117858.mlab.com:17858/miro2018', {useMongoClient: true}, function(req, res){
+mongoose.connect('자기디비채워넣', {useMongoClient: true}, function(req, res){
   console.log('We are Connected!')
 });
 mongoose.Promise = global.Promise;
